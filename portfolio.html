@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'/>
+  <title>Giovanni Gioachin</title>
+  <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+  <link rel='stylesheet' href='style.css'/>
+  <style>
+    .slab, h2 {
+          font-family: 'Rokkitt', serif;
+          }
+  </style>
+</head>
+<body class='background'>
+  <header class='main-header'>
+    <nav>
+      <a class='smooth' href='#home'>Home</a>
+      <a class='smooth' href='#about'>About</a>
+      <a class='smooth' href='#progetti'>Progetti</a>
+      <a class='smooth' href='#contatti'>Contatti</a>
+    </nav>
+  </header>
+  <div class='mainstyle'>
+    <a id='home'></a>
+      <div class='home slab'>
+          <p>"Strength does not come from winning.</p>
+          <p>Your struggles develop your strengths.</p>
+          <p>When you go through hardships and decide not to surrender,</p>
+          <p>that is strength."</p>
+          <h4>Arnold Schwarzenegger</h4>
+      </div>
+  </div>
+  </br>
+  <div class='mainstyle'>
+  </br>
+    <a id='about'></a>
+    <section class='section'>
+      <h2>Aboute me</h2>
+      <div class='item'><img src='images/photo.jpg' class='shape'/>
+          <p>Sono Giovanni Gioachin e ho 33 anni. Sono di Padova ma da
+            Luglio 2019 sono residente fisso a Londra. Ho due grandi passioni:
+          il teatro e la programmazione. Di quest'ultima, attualmente, mi sto
+          specializzando come Full Stack Developer. Tutti i miei progetti si basano
+          su un'unica filosofia:<center><h3>"Semplice ma efficace"</h3><center></p>
+      </div>
+	  </section>
+  </div>
+  <div class='mainstyle'>
+  </br>
+    <a id='progetti'></a>
+    <section class='section'>
+      <h2>Progetti</h2>
+      <div class='item'>
+        <figure><img src='images/worker.svg' style='max-width: 200px; float:left'/></figure>
+          <p>Attualmente non sono disponibili alla visione.
+            Mi occupo comunque di sviluppo web utilizzando:
+            <ul>
+              <li>HTML/CSS</li>
+              <li>JavaScript</li>
+              <li>PHP/MySQL</li>
+            <ul>
+          </p>
+      </div>
+    </section>
+  </div>
+  </br>
+  <div class='mainstyle'>
+    <a id='contatti'></br></a>
+    <section class='section'>
+      <h2>Contatti</h2>
+      <div class='contact-icons-container'>
+        <div class='social-icons'>
+          <div><a href='https://www.instagram.com/giovannigioachin/' target="_blank">
+                  <img class='illustration' src='images/instagram2.svg'/></a>
+          </div>
+          <div><a href='https://www.facebook.com/giovanni.gioachin' target="_blank">
+                  <img class='illustration'src='images/facebook2.svg'/></a>
+          </div>
+          <div><a href='https://linkedin.com/in/giovanni-gioachin-5aa6b618b' target="_blank">
+                  <img class='illustration'src='images/linkedin2.svg'/></a>
+          </div>
+        </div>
+        <div class='trad-icons'>
+          <div class='phone'><img class='illustration'src='images/phone2.svg' style='float:left'/>
+             <p><strong>+44 7874316186</strong></p>
+          </div>
+          <div class='email'><img class='illustration'src='images/email2.svg' style='float:left'>
+             <a href='mailto:giovanni787@gmail.com' alt='send me an email'><p>giovanni787@gmail.com</p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+      from <a href="https://www.flaticon.com" title="Flaticon"> www.flaticon.com</a></p>
+    </footer>
+  </div>
+
+
+<!--script Scollify -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"
+ integrity="sha256-RGlAwHKG24hsj1109SGQgvR+Orx7u8c6zyYH4Tk3ydU=" crossorigin="anonymous"></script>
+
+<script>
+        $(function() {
+          $.scrollify({
+            section : ".mainstyle",
+          });
+        });
+</script>
+<!-- Fine script Scrollify -->
+
+<!-- Script smooth scroll ancore -->
+<script>
+        var smooth = [$('a.smooth'), 100, 750];
+
+        smooth[0].click(function() {
+          $('html, body').animate({
+            scrollTop: $('[id="' + $.attr(this, 'href').substr(1) + '"]').offset().top -smooth[1]
+          }, smooth[2]);
+          return false;
+        });
+</script>
+<!-- Fine script smooth scroll ancore -->
+
+</body>
+</html>
